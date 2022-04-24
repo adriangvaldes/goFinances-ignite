@@ -9,7 +9,8 @@ import {
   UserGreeting,
   UserInfo,
   UserName,
-  UserWrapper
+  UserWrapper,
+  HighlightCards,
 } from './styles';
 import { RFValue } from 'react-native-responsive-fontsize';
 import HighlightCard from '../../components/HIghlightCard';
@@ -29,7 +30,23 @@ export function Dashboard() {
           <Icon name="power" />
         </UserWrapper>
       </Header>
-      <HighlightCard />
+      <HighlightCards>
+        <HighlightCard
+          type='up'
+          title='Entradas'
+          amount='R$ 17.400,00'
+          lastTransaction='Última entrada dia 13 de abril' />
+        <HighlightCard
+          type='down'
+          title='Saídas'
+          amount='R$ 1.259,00'
+          lastTransaction='Última saída dia 15 de abril' />
+        <HighlightCard
+          type='total'
+          title='Total'
+          amount='R$ 21.123,00'
+          lastTransaction='01 à 16 de abril' />
+      </HighlightCards >
     </Container>
   )
 }
